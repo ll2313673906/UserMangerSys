@@ -18,6 +18,12 @@ public interface UserDAO {
     //计算页面的数目
     public int searchCount();
 
+    //修改用户
+    public int update(User user);
+
+    //添加用户
+    public  int addUser(User user);
+
     //统计数据库中的用户数量
     int countUserId();
     public List<HashMap> search(int pageSize,int ePageSize);

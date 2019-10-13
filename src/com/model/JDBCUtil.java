@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public class JDBCUtil {
-	private static String url = "jdbc:mysql://localhost:3306/uhgl";
+	private static String url = "jdbc:mysql://localhost:3306/uhgl?useUnicode=true&characterEncoding=utf-8";
 	private static String name = "root";
 	private static String password = "root";
 	private static Connection connnection = null;

@@ -55,6 +55,26 @@ class UserDAOSqlServerImpl extends JDBCUtil implements UserDAO {
     }
 
     @Override
+    public int update(User user) {
+        //修改用户
+        String sql = "UPDATE t_user SET userName=?,password=?,email=?, grade =? WHERE userId =?";
+        Object[] params = {user.getUserName(),user.getPassword(),user.getEmail(),user.getGrade(),user.getUserId()};
+        return this.executeUpdate(sql,params);
+
+     }
+
+    @Override
+    public int addUser(User user) {
+        //添加用户功能
+      String sql = "INSERT INTO t_user (userName, password,email,grade) VALUES (?,?,?,?)";
+      Object[] params = {user.getUserName(),user.getPassword(),user.getEmail(),user.getGrade()};
+      int n = this.executeUpdate(sql,params);
+      return n;
+    }
+
+
+
+    @Override
     public int countUserId() {
         String sql = "SELECT COUNT(userId) FROM t_user";
         int n = this.executeUpdate(sql);

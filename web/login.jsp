@@ -15,8 +15,9 @@
             padding: 0;
         }
         body{
-            background-color:blueviolet;
+            background: url(images/bg1.jpg) 50% 0 repeat;
             text-align: center;
+
 
         }
         form{
@@ -26,12 +27,7 @@
 
             margin-top: 50px;
         }
-        .img{
-            background-image:url("images/bg1.jpg");
-            width: 300px;
-            height: 200px;
-            margin-left: 600px;
-        }
+
     </style>
 </head>
 <body>
